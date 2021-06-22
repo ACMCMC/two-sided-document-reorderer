@@ -48,7 +48,7 @@ def reorder_reverse(pdf1: PdfFileReader, pdf2: PdfFileReader) -> PyPDF2.PdfFileW
     # We use pdf2.getNumPages() because it's the lesser of the two values
     for i in range(pdf2.getNumPages()):
         pdfWriter.addPage(pdf1.getPage(i))
-        pdfWriter.addPage(pdf2.getPage(pdf2.getNumPages() - i))
+        pdfWriter.addPage(pdf2.getPage((pdf2.getNumPages() - 1) - i))
 
     if (pdf1.getNumPages() - 1) == pdf2.getNumPages():
         pdfWriter.addPage(pdf1.getPage(pdf1.getNumPages()-1))

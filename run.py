@@ -23,10 +23,10 @@ class CommandProcessor(cmd.Cmd):
 
 if __name__ == '__main__':
     try:
-        if len(sys.argv) > 4 and sys.argv[2] == '-r':
+        if len(sys.argv) > 4 and sys.argv[4] == '-r':
             mode = Mode.REVERSE_SECOND
         else:
             mode = Mode.STANDARD
-        run(sys.argv[1], sys.argv[2], sys.argv[3], mode)
+        run(sys.argv[1], sys.argv[2], sys.argv[3], mode=mode)
     except IndexError:
         CommandProcessor().cmdloop()
