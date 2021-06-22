@@ -1,8 +1,8 @@
 from setuptools import setup
 
 setup(
-   name='Two-sided Document Reorderer',
-   version='0.1.0',
+   name='Two-Sided Document Reorderer',
+   version='0.1.1',
    author='Aldán Creo',
    author_email='aldan.creo@gmail.com',
    packages=['two_sided_document_reorderer'],
